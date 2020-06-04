@@ -72,6 +72,10 @@ Data = pd.read_csv(URL)
 Data.head()
 ```
 
+### Data Processing
+
+In this study, a total of 14 LDAPS modelforecast data, Tmaxt, Tmint, and ve auxiliary variables were used as input variables, while Tmaxtþ1and Tmintþ1were used as target variables (Table 1). LDAPSderived temperature forecast data were processed using lapserates with elevation data developed by Yun et al. (2001) to calculate more reliable temperature valuesbecause the elevation information used in the LDAPS model was not accurate due to its smoothed surfacewhich is applied to eliminate gridscale numerical noise in NWP models (Bosart et al., 1998; Wallaceet al., 1983; Webster et al., 2003). For mapping Tmaxtþ1and Tmintþ1using the developed models,pointbased insitu Tmaxtand Tmintdata were rasterized through cokriging interpolation. The cokriging tech-nique is known to have a higher estimation accuracy than the kriging or the Inverse Distance WeightedMethod (IDW) in interpolating hourly air temperature (Ishida & Kawashima, 1993). With cokriging, the ele-vation data was used as a covariable, which is considered to be one of the most important additional vari-ables for estimating air temperature (Aznar et al., 2013). We selected the ordinary cokriging method amongseveral cokriging techniques (e.g., simple cokriging and universal cokriging) through a comparison of theirperformance
+
 ## Contributing
 If any one Intrested work with Use Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
